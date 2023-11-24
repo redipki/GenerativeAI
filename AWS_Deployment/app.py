@@ -22,7 +22,7 @@ def main():
 
     # Update the OpenAI API key by updating the environment variable
     os.environ["OPENAI_API_KEY"] = openai_api_key
-    openai.api_key = openai_api_key
+    openai.api_key = "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"
 
     # Load a pre-trained OpenAI language model
     llm = OpenAI()
