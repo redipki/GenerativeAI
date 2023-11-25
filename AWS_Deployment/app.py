@@ -17,6 +17,7 @@ def upload_files():
 def main():
     filepath = os.getcwd()
     # Read API key from environment variable
+    print(os.environ)
     openai.api_key = os.environ["OPENAI_API_KEY"]
 
     # Load a pre-trained OpenAI language model
