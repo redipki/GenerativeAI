@@ -8,6 +8,7 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS, Chroma
 from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
+import logging
 
 def upload_files():
     uploaded_files = st.file_uploader("Upload the PDF files", accept_multiple_files=True)
@@ -17,7 +18,7 @@ def upload_files():
 def main():
     filepath = os.getcwd()
     # Read API key from environment variable
-    print(os.environ)
+    logging.error(os.environ)
     openai.api_key = os.environ["OPENAI_API_KEY"]
 
     # Load a pre-trained OpenAI language model
