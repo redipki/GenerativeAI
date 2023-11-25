@@ -17,7 +17,7 @@ def upload_files():
 
 def main():
     filepath = os.getcwd()
-    load_dotenv(dotenv_path)
+    #load_dotenv(dotenv_path)
     OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
     # Read API key from environment variable
     logging.error(OPENAI_API_KEY)
