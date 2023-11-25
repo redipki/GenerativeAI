@@ -17,9 +17,11 @@ def upload_files():
 
 def main():
     filepath = os.getcwd()
+    load_dotenv(dotenv_path)
+    OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
     # Read API key from environment variable
-    logging.error(os.environ)
-    openai.api_key = os.environ["OPENAI_API_KEY"]
+    logging.error(OPENAI_API_KEY)
+    openai.api_key = OPENAI_API_KEY
 
     # Load a pre-trained OpenAI language model
     llm = OpenAI()
