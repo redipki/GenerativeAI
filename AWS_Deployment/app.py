@@ -17,6 +17,7 @@ def upload_files():
 
 def main():
     # Read the text file containing the API key
+    filepath = os.getcwd()
     with open(filepath + "/OpenAI_API_Key.txt", "r") as f:
         openai.api_key = ' '.join(f.readlines())
 
