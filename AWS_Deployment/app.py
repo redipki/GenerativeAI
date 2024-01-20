@@ -25,7 +25,7 @@ def main():
     os.environ["OPENAI_API_KEY"] = openai.api_key
 
     # Load a pre-trained OpenAI language model
-    llm = OpenAI()
+    llm = OpenAI(model="gpt-3.5-turbo-instruct")
 
     # Configure the page settings for the Streamlit app
     st.set_page_config(page_title="Chat with PDF")
